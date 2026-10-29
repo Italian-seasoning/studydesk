@@ -1,4 +1,4 @@
-const CACHE='studydesk-78cb0ac16127;
+const CACHE='studydesk-78cb0ac16127';
 const SHELL=new URL('./index.html',self.location).href;
 self.addEventListener('install',event=>event.waitUntil(caches.open(CACHE).then(cache=>cache.add(new Request(SHELL,{cache:'reload'})))));
 self.addEventListener('message',event=>{if(event.data==='ACTIVATE')self.skipWaiting();});
